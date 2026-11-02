@@ -426,6 +426,15 @@ function LayoutContent() {
                       }}
                     />
                     <Stack.Screen
+                      name="pair"
+                      options={{
+                        title: t("Pair this phone"),
+                        presentation: "formSheet",
+                        sheetAllowedDetents: [0.6, 1],
+                        sheetGrabberVisible: true,
+                      }}
+                    />
+                    <Stack.Screen
                       name="new-group"
                       options={{
                         title: t("New group chat"),

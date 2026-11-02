@@ -1254,6 +1254,17 @@ export const JA_MESSAGES: Record<string, string> = {
   "Won't do": "対応しない",
   "Could not move the ticket": "チケットを移動できませんでした",
   "No tickets yet.": "チケットはまだありません。",
+  "Could not pair this phone": "この電話をペアリングできませんでした",
+  "On a device you are signed in on, open Settings, choose Pair a phone, and scan the QR code with this phone's camera. Or paste the link here.":
+    "サインイン済みのデバイスで設定を開き、「電話をペアリング」を選んで、この電話のカメラでQRコードをスキャンします。または、ここにリンクを貼り付けてください。",
+  "Pair this phone": "この電話をペアリング",
+  "Pair with a QR code or link": "QRコードまたはリンクでペアリング",
+  "Pairing did not return a session": "ペアリングでセッションが返されませんでした",
+  "Pairing link": "ペアリングリンク",
+  "Pairing…": "ペアリング中…",
+  "Sign in to this server without typing a password. This phone will be signed out of any other server it uses now.":
+    "パスワードを入力せずにこのサーバーにサインインします。この電話は、現在使用している他のサーバーからサインアウトされます。",
+  "That is not a pairing link": "ペアリングリンクではありません",
 };
 
 export const PEER_MESSAGE_FORMS = { other: "{peer}とのメッセージ{count}件" };

@@ -537,6 +537,17 @@ export default function SignIn() {
             </ScrollView>
             <Pressable
               accessibilityRole="button"
+              accessibilityLabel={t("Pair with a QR code or link")}
+              hitSlop={12}
+              onPress={() => router.push("/pair")}
+              style={{ alignItems: "center", paddingHorizontal: 24, paddingTop: 8 }}
+            >
+              <Text style={{ color: tokens.mutedForeground, fontSize: 13 }}>
+                {t("Pair with a QR code or link")}
+              </Text>
+            </Pressable>
+            <Pressable
+              accessibilityRole="button"
               accessibilityLabel={
                 custom
                   ? t("Custom server {host}", { host: displayApiHost(apiBase) })

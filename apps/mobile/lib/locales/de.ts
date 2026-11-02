@@ -1231,6 +1231,17 @@ export const DE_MESSAGES: Record<string, string> = {
   "Won't do": "Wird nicht gemacht",
   "Could not move the ticket": "Ticket konnte nicht verschoben werden",
   "No tickets yet.": "Noch keine Tickets.",
+  "Could not pair this phone": "Dieses Telefon konnte nicht gekoppelt werden",
+  "On a device you are signed in on, open Settings, choose Pair a phone, and scan the QR code with this phone's camera. Or paste the link here.":
+    "Öffne auf einem Gerät, auf dem du angemeldet bist, die Einstellungen, wähle „Telefon koppeln“ und scanne den QR-Code mit der Kamera dieses Telefons. Oder füge den Link hier ein.",
+  "Pair this phone": "Dieses Telefon koppeln",
+  "Pair with a QR code or link": "Mit QR-Code oder Link koppeln",
+  "Pairing did not return a session": "Die Kopplung hat keine Sitzung zurückgegeben",
+  "Pairing link": "Kopplungslink",
+  "Pairing…": "Wird gekoppelt…",
+  "Sign in to this server without typing a password. This phone will be signed out of any other server it uses now.":
+    "Melde dich ohne Passwort bei diesem Server an. Dieses Telefon wird von jedem anderen Server abgemeldet, den es jetzt verwendet.",
+  "That is not a pairing link": "Das ist kein Kopplungslink",
 };
 
 export const PEER_MESSAGE_FORMS: Partial<Record<Intl.LDMLPluralRule, string>> = {

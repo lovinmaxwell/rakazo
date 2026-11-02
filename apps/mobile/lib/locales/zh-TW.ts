@@ -1237,6 +1237,17 @@ export const ZH_TW_MESSAGES: Record<string, string> = {
   "Won't do": "不處理",
   "Could not move the ticket": "無法移動工單",
   "No tickets yet.": "還沒有工單。",
+  "Could not pair this phone": "無法配對此手機",
+  "On a device you are signed in on, open Settings, choose Pair a phone, and scan the QR code with this phone's camera. Or paste the link here.":
+    "在已登入的裝置上開啟「設定」，選擇「配對手機」，然後用這支手機的相機掃描 QR 碼。或在此貼上連結。",
+  "Pair this phone": "配對此手機",
+  "Pair with a QR code or link": "使用 QR 碼或連結配對",
+  "Pairing did not return a session": "配對未傳回工作階段",
+  "Pairing link": "配對連結",
+  "Pairing…": "正在配對…",
+  "Sign in to this server without typing a password. This phone will be signed out of any other server it uses now.":
+    "無需輸入密碼即可登入此伺服器。此手機將登出它目前使用的其他伺服器。",
+  "That is not a pairing link": "這不是配對連結",
 };
 
 export const PEER_MESSAGE_FORMS = { other: "與{peer}的 {count} 則訊息" };

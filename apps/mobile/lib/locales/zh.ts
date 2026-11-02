@@ -1240,6 +1240,17 @@ export const ZH_MESSAGES: Record<string, string> = {
   "Won't do": "不做",
   "Could not move the ticket": "无法移动工单",
   "No tickets yet.": "还没有工单。",
+  "Could not pair this phone": "无法配对此手机",
+  "On a device you are signed in on, open Settings, choose Pair a phone, and scan the QR code with this phone's camera. Or paste the link here.":
+    "在已登录的设备上打开“设置”，选择“配对手机”，然后用这部手机的相机扫描二维码。或者在此粘贴链接。",
+  "Pair this phone": "配对此手机",
+  "Pair with a QR code or link": "使用二维码或链接配对",
+  "Pairing did not return a session": "配对未返回会话",
+  "Pairing link": "配对链接",
+  "Pairing…": "正在配对…",
+  "Sign in to this server without typing a password. This phone will be signed out of any other server it uses now.":
+    "无需输入密码即可登录此服务器。此手机将退出它当前使用的其他服务器。",
+  "That is not a pairing link": "这不是配对链接",
 };
 
 export const PEER_MESSAGE_FORMS: Partial<Record<Intl.LDMLPluralRule, string>> = {

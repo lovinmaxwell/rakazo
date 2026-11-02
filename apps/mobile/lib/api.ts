@@ -595,6 +595,11 @@ export function signUp(email: string, password: string, name: string) {
   );
 }
 
+/** Signs this phone in with a code a signed-in device made, so no password is typed. */
+export function redeemPairingCode(code: string) {
+  return authenticate("device-pairing/redeem", { code }, t("Pairing did not return a session"));
+}
+
 /** Always succeeds when the server accepts the request, whether or not an email was sent. */
 export async function sendSignInCode(email: string): Promise<void> {
   const { response, body, invalidJson } = await postAuth("email-otp/send-verification-otp", {

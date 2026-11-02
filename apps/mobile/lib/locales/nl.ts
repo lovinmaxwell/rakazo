@@ -1223,6 +1223,17 @@ export const NL_MESSAGES: Record<string, string> = {
   "Won't do": "Wordt niet gedaan",
   "Could not move the ticket": "Kon ticket niet verplaatsen",
   "No tickets yet.": "Nog geen tickets.",
+  "Could not pair this phone": "Kan deze telefoon niet koppelen",
+  "On a device you are signed in on, open Settings, choose Pair a phone, and scan the QR code with this phone's camera. Or paste the link here.":
+    "Open op een apparaat waarop je bent ingelogd de instellingen, kies Telefoon koppelen en scan de QR-code met de camera van deze telefoon. Of plak de link hier.",
+  "Pair this phone": "Deze telefoon koppelen",
+  "Pair with a QR code or link": "Koppelen met een QR-code of link",
+  "Pairing did not return a session": "Koppelen gaf geen sessie terug",
+  "Pairing link": "Koppelingslink",
+  "Pairing…": "Koppelen…",
+  "Sign in to this server without typing a password. This phone will be signed out of any other server it uses now.":
+    "Log zonder wachtwoord in op deze server. Deze telefoon wordt uitgelogd bij elke andere server die hij nu gebruikt.",
+  "That is not a pairing link": "Dat is geen koppelingslink",
 };
 
 export const PEER_MESSAGE_FORMS: Partial<Record<Intl.LDMLPluralRule, string>> = {

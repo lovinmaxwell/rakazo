@@ -11,6 +11,22 @@ The app accepts plain `http://` only for a private IP, `localhost`, or a `.local
 
 Native apps need a setting on the server before they can use its [passkeys](./self-host-accounts.md#passkeys).
 
+## Pair a phone with a QR code
+
+Once a phone can reach the server (see the sections above and below), pair it without typing a
+password. In **Settings → Phone**, choose **Show QR code** and scan it with the phone's camera. The
+code opens `https://<your server>/pair`, where you choose **Open in the Rakazo app** or **Sign in in
+this browser**. In the app you can also choose **Pair with a QR code or link** on the sign-in
+screen and paste the link.
+
+A code works once, expires after two minutes, and signs the phone in as the account that made it.
+Only a hash of it is stored. It travels in the link's fragment, so servers and proxies never log
+it. Nothing happens when the page merely loads, so a link preview cannot spend the code.
+
+The QR code uses the server's `WEB_ORIGIN`. If that is `http://127.0.0.1:5173`, settings warn
+that a phone cannot reach it: set `WEB_ORIGIN` to the LAN or Tailscale address first. Pairing a
+phone to a different server signs it out of the one it used before.
+
 ## Connecting a phone on the same network
 
 In the Compose stack's `.env`, set `RAKAZO_WEB_BIND=0.0.0.0` (or the host's LAN IP),

@@ -23,6 +23,16 @@ export default ({ config }: ConfigContext): ExpoConfig => {
   }
 
   let result = config as ExpoConfig;
+  // A build of a fork installs beside the store app when it names its own application id.
+  const appId = process.env.RAKAZO_APP_ID;
+  if (appId) {
+    result = {
+      ...result,
+      name: process.env.RAKAZO_APP_NAME ?? result.name,
+      ios: { ...result.ios, bundleIdentifier: appId },
+      android: { ...result.android, package: appId },
+    };
+  }
   const rpId = passkeyRpId(process.env.EXPO_PUBLIC_API_URL);
   if (rpId) {
     // Native passkeys only work for domains the binary is associated with, so the app reads the

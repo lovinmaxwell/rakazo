@@ -425,15 +425,7 @@ function LayoutContent() {
                         sheetGrabberVisible: true,
                       }}
                     />
-                    <Stack.Screen
-                      name="pair"
-                      options={{
-                        title: t("Pair this phone"),
-                        presentation: "formSheet",
-                        sheetAllowedDetents: [0.6, 1],
-                        sheetGrabberVisible: true,
-                      }}
-                    />
+                    <Stack.Screen name="pair" options={glassHeaderOptions(t("Pair this phone"))} />
                     <Stack.Screen
                       name="new-group"
                       options={{

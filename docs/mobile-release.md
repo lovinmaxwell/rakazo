@@ -77,6 +77,25 @@ through the over-the-air updates below without a new APK. A Google Play install
 is signed with Play's key, so switching from the APK to Play means uninstalling
 the APK first.
 
+### Build an APK locally
+
+To test a change without EAS, build on your own machine with JDK 17 and the Android SDK (platform
+36, build tools 36.0.0, NDK 27.1.12297006). Set `RAKAZO_APP_ID` (and optionally `RAKAZO_APP_NAME`)
+so the build installs beside the store app instead of replacing it:
+
+```bash
+cd apps/mobile
+RAKAZO_APP_ID=com.example.rakazofork RAKAZO_APP_NAME="Rakazo Fork" \
+  npx expo prebuild --platform android --no-install
+cd android
+# Gradle needs about 5 GB of heap for a release build:
+#   org.gradle.jvmargs=-Xmx5g -XX:MaxMetaspaceSize=1536m   (in android/gradle.properties)
+./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a
+```
+
+The APK is `android/app/build/outputs/apk/release/app-release.apk`, signed with a debug key, so
+it is for your own devices. `android/` is generated and not committed.
+
 ## Android push
 
 For Android push notifications, create a Firebase project and register the app's

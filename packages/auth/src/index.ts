@@ -34,6 +34,11 @@ import {
   signedBearer,
 } from "./account-security.js";
 import { breachedPasswordCheck } from "./breached-password.js";
+import {
+  DEVICE_PAIRING_CREATE_PATH,
+  DEVICE_PAIRING_REDEEM_PATH,
+  devicePairing,
+} from "./device-pairing.js";
 import type { EmailLocaleOf } from "./email.js";
 import { emailLocale, passwordResetEmail, signInCodeEmail, verificationEmail } from "./email.js";
 import { hasRecentIdentityConfirmation, identityConfirmation } from "./identity-confirmation.js";
@@ -139,6 +144,9 @@ export function authRateLimitOptions(nodeEnv = process.env.NODE_ENV) {
       "/request-account-deletion": { window: 600, max: 3 },
       "/request-identity-code": { window: 600, max: 3 },
       "/confirm-identity": rule,
+      [DEVICE_PAIRING_CREATE_PATH]: { window: 600, max: 10 },
+      // Redeeming needs no session, so it is throttled like a credential guess.
+      [DEVICE_PAIRING_REDEEM_PATH]: rule,
       "/passkey/verify-authentication": rule,
       "/passkey/verify-registration": rule,
       // Sign-in pages request a challenge on load for passkey autofill.
@@ -306,6 +314,7 @@ export function createAuth(prisma: PrismaClient, env: AuthEnv) {
         env.oidc?.issuer,
         env.passwordAuth !== false,
       ),
+      devicePairing(),
       identityConfirmation(env.email, emailLocaleOf),
       ...(discovery ? [discovery.plugin] : []),
       ...(emailCodeSignIn

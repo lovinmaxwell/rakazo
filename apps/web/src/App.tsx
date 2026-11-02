@@ -47,6 +47,7 @@ const AuthPage = lazyComponent(() => import("./pages/Auth").then((module) => mod
 const PasswordResetPage = lazyComponent(() =>
   import("./pages/Auth").then((module) => module.PasswordResetPage),
 );
+const PairPage = lazyComponent(() => import("./pages/PairPage").then((module) => module.PairPage));
 const OnboardingPage = lazyComponent(() =>
   import("./pages/Onboarding").then((module) => module.OnboardingPage),
 );
@@ -209,6 +210,7 @@ function SessionApp() {
                 }
               />
               <Route path="/reset-password" element={<PasswordResetPage />} />
+              <Route path="/pair" element={user ? <Navigate to="/app" replace /> : <PairPage />} />
               <Route
                 path={MCP_OAUTH_CALLBACK_PATH}
                 element={

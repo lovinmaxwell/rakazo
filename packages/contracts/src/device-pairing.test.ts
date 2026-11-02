@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  appPairingLink,
   devicePairingSchema,
   isLoopbackOrigin,
   pairingLink,
@@ -7,29 +8,46 @@ import {
 } from "./device-pairing.js";
 
 const code = "A".repeat(43);
+const target = { code, server: "https://rakazo.example.test:8443" };
 
 describe("pairing links", () => {
-  it("round-trips a code and the server origin", () => {
-    const link = pairingLink({ code, server: "https://rakazo.example.test:8443/ignored/path" });
-    expect(link).toBe(
-      `rakazo://pair?server=${encodeURIComponent("https://rakazo.example.test:8443")}&code=${code}`,
-    );
-    expect(parsePairingLink(link)).toEqual({ code, server: "https://rakazo.example.test:8443" });
+  it("keeps the code in the fragment of a plain web address", () => {
+    const link = pairingLink({
+      ...target,
+      server: "https://rakazo.example.test:8443/ignored/path",
+    });
+    expect(link).toBe(`https://rakazo.example.test:8443/pair#code=${code}`);
+    expect(new URL(link).search).toBe("");
   });
 
-  it("reads a link pasted with surrounding whitespace and in any parameter order", () => {
-    const link = `  rakazo://pair?code=${code}&server=http%3A%2F%2F192.168.1.5%3A5173  `;
-    expect(parsePairingLink(link)).toEqual({ code, server: "http://192.168.1.5:5173" });
+  it("round-trips both forms of link to the same code and server", () => {
+    expect(parsePairingLink(pairingLink(target))).toEqual(target);
+    expect(parsePairingLink(appPairingLink(target))).toEqual(target);
+    expect(appPairingLink(target)).toBe(
+      `rakazo://pair?server=${encodeURIComponent(target.server)}&code=${code}`,
+    );
+  });
+
+  it("reads a link pasted with surrounding whitespace, a trailing slash or any parameter order", () => {
+    expect(parsePairingLink(`  http://192.168.1.5:5173/pair/#code=${code}  `)).toEqual({
+      code,
+      server: "http://192.168.1.5:5173",
+    });
+    expect(
+      parsePairingLink(`rakazo://pair?code=${code}&server=http%3A%2F%2F192.168.1.5%3A5173`),
+    ).toEqual({ code, server: "http://192.168.1.5:5173" });
   });
 
   it.each([
-    ["another scheme", `https://pair?server=https%3A%2F%2Fa.test&code=${code}`],
-    ["another screen", `rakazo://thread?server=https%3A%2F%2Fa.test&code=${code}`],
-    ["a missing code", "rakazo://pair?server=https%3A%2F%2Fa.test"],
-    ["a short code", "rakazo://pair?server=https%3A%2F%2Fa.test&code=abc"],
-    ["a non-web server", `rakazo://pair?server=ftp%3A%2F%2Fa.test&code=${code}`],
-    ["an unparseable server", `rakazo://pair?server=not-a-url&code=${code}`],
-    ["a bad escape", `rakazo://pair?server=%E0%A4%A&code=${code}`],
+    ["another page", `https://a.test/sign-in#code=${code}`],
+    ["a code in the query, which is sent to servers", `https://a.test/pair?code=${code}`],
+    ["a missing code", "https://a.test/pair#"],
+    ["a short code", "https://a.test/pair#code=abc"],
+    ["a non-web address", `ftp://a.test/pair#code=${code}`],
+    ["another app screen", `rakazo://thread?server=https%3A%2F%2Fa.test&code=${code}`],
+    ["an app link without a server", `rakazo://pair?code=${code}`],
+    ["an app link to a non-web server", `rakazo://pair?server=ftp%3A%2F%2Fa.test&code=${code}`],
+    ["an app link with a bad escape", `rakazo://pair?server=%E0%A4%A&code=${code}`],
     ["plain text", "hello"],
   ])("rejects %s", (_label, link) => {
     expect(parsePairingLink(link)).toBeNull();

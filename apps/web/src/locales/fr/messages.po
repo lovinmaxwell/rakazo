@@ -767,6 +767,10 @@ msgstr "Un autre agent"
 msgid "Another assistant"
 msgstr "Autre assistant"
 
+#: src/pages/PairPage.tsx
+msgid "Another device you're signed in on made this code. It works once."
+msgstr ""
+
 #: src/components/AskCard.tsx
 msgid "Answer"
 msgstr "Répondre"
@@ -1720,6 +1724,7 @@ msgstr ""
 #: src/components/ComputersUnavailableHint.tsx
 #: src/components/InviteDialog.tsx
 #: src/components/markdown-copy.tsx
+#: src/components/PairPhoneSettings.tsx
 #: src/components/VaultSettings.tsx
 #: src/pages/model-settings/connection-controls.tsx
 #: src/pages/Onboarding.tsx
@@ -1746,6 +1751,10 @@ msgstr "Copier le code"
 #: src/components/markdown-copy.tsx
 msgid "Copy diagram source"
 msgstr "Copier la source du diagramme"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "Copy link"
+msgstr ""
 
 #: src/pages/shell/agent-import.tsx
 msgid "Copy prompt"
@@ -1855,6 +1864,11 @@ msgstr "Impossible de se connecter à l'écran de l'ordinateur"
 #: src/pages/shell/use-computer.tsx
 msgid "Could not continue"
 msgstr "Impossible de continuer"
+
+#: src/components/PairPhoneSettings.tsx
+#: src/lib/device-pairing.ts
+msgid "Could not create a pairing code"
+msgstr ""
 
 #: src/pages/shell/agent-import.tsx
 #: src/pages/shell/create-bot-dialog.tsx
@@ -2041,6 +2055,11 @@ msgstr "Impossible de se déconnecter. Réessayez."
 #: src/pages/Onboarding.tsx
 #: src/pages/Paywall.tsx
 msgid "Could not open billing"
+msgstr ""
+
+#: src/lib/device-pairing.ts
+#: src/pages/PairPage.tsx
+msgid "Could not pair this device"
 msgstr ""
 
 #: src/pages/VoiceSettingsOverlay.tsx
@@ -2887,6 +2906,12 @@ msgstr "Agrandir le tableau"
 #: src/components/CloudAgentCard.tsx
 msgid "expired"
 msgstr "expiré"
+
+#. placeholder {0}: Math.floor(secondsLeft / 60)
+#. placeholder {1}: String(secondsLeft % 60).padStart(2, "0")
+#: src/components/PairPhoneSettings.tsx
+msgid "Expires in {0}:{1}"
+msgstr ""
 
 #: src/components/AccountDataSettings.tsx
 #: src/pages/shell/bot-panel.tsx
@@ -3992,6 +4017,10 @@ msgstr ""
 msgid "New bot"
 msgstr "Nouveau bot"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "New code"
+msgstr ""
+
 #: src/pages/GroupPanel.tsx
 msgid "New group"
 msgstr "Nouveau groupe"
@@ -4313,6 +4342,10 @@ msgstr "Ouvrir le lien externe ?"
 msgid "Open in full window"
 msgstr "Ouvrir en fenêtre complète"
 
+#: src/pages/PairPage.tsx
+msgid "Open in the Rakazo app"
+msgstr ""
+
 #: src/pages/shell/chat-header.tsx
 msgid "Open navigation"
 msgstr "Ouvrir la navigation"
@@ -4387,6 +4420,11 @@ msgstr "Page introuvable"
 #: src/pages/RoutineEditor.tsx
 msgid "PagerDuty incident"
 msgstr "Incident PagerDuty"
+
+#: src/components/PairPhoneSettings.tsx
+#: src/pages/PairPage.tsx
+msgid "Pair a phone"
+msgstr ""
 
 #: src/components/PasskeySettings.tsx
 msgid "Passkey"
@@ -4472,6 +4510,10 @@ msgstr "Personnalité"
 
 #: src/components/SignupSurvey.tsx
 msgid "Personal"
+msgstr ""
+
+#: src/components/PairPhoneSettings.tsx
+msgid "Phone"
 msgstr ""
 
 #: src/components/call/VoiceChatCard.tsx
@@ -4607,6 +4649,10 @@ msgstr "Fournisseurs"
 #: src/components/CloudAgentCard.tsx
 msgid "Pull request"
 msgstr "Demande de fusion"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "QR code to pair a phone"
+msgstr ""
 
 #: src/pages/ActivityList.tsx
 msgid "Queued"
@@ -5195,6 +5241,10 @@ msgstr "Enregistrement en cours…"
 msgid "Say yes or no, or answer in a sentence."
 msgstr "Dites oui ou non, ou répondez en une phrase."
 
+#: src/components/PairPhoneSettings.tsx
+msgid "Scan with your phone's camera and open the link in Rakazo to sign in without typing a password. Each code works once and expires after two minutes."
+msgstr ""
+
 #: src/components/ModelCredits.tsx
 msgid "Scheduled routines"
 msgstr ""
@@ -5426,6 +5476,10 @@ msgstr "Afficher plus"
 msgid "Show password"
 msgstr "Afficher le mot de passe"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "Show QR code"
+msgstr ""
+
 #: src/pages/GroupPanel.tsx
 msgid "Show selected"
 msgstr ""
@@ -5447,6 +5501,7 @@ msgstr ""
 #: src/pages/Auth.tsx
 #: src/pages/model-settings/connection-controls.tsx
 #: src/pages/Onboarding.tsx
+#: src/pages/PairPage.tsx
 #: src/pages/PluginsOverlay.tsx
 #: src/pages/Welcome.tsx
 msgid "Sign in"
@@ -5466,6 +5521,14 @@ msgstr "Se reconnecter"
 #: src/pages/Onboarding.tsx
 msgid "Sign in at <0>{0}</0>, then paste the code here."
 msgstr "Connectez-vous sur <0>{0}</0>, puis collez le code ici."
+
+#: src/pages/PairPage.tsx
+msgid "Sign in here"
+msgstr ""
+
+#: src/pages/PairPage.tsx
+msgid "Sign in in this browser"
+msgstr ""
 
 #: src/pages/Auth.tsx
 msgid "Sign in to Rakazo"
@@ -5925,6 +5988,10 @@ msgstr "Cette action est irréversible."
 msgid "This cannot be undone."
 msgstr "Cette action est irréversible."
 
+#: src/components/PairPhoneSettings.tsx
+msgid "This code expired. Choose New code to make another."
+msgstr ""
+
 #: src/pages/HostComputerPrompt.tsx
 msgid "this computer"
 msgstr "cet ordinateur"
@@ -5974,6 +6041,14 @@ msgstr "La fenêtre de contexte de ce modèle est trop petite. Choisissez un aut
 msgid "This month"
 msgstr "Ce mois-ci"
 
+#: src/lib/user-error.ts
+msgid "This pairing code is invalid or has expired"
+msgstr ""
+
+#: src/pages/PairPage.tsx
+msgid "This pairing link is invalid or has expired."
+msgstr ""
+
 #: src/components/AccountAccess.tsx
 msgid "This permanently deletes your account and data."
 msgstr "Cela supprime définitivement votre compte et vos données."
@@ -6006,9 +6081,18 @@ msgstr "Ce serveur ne peut pas être assigné sans bot."
 msgid "This server did not request browser authorization."
 msgstr "Ce serveur n'a pas demandé l'autorisation du navigateur."
 
+#: src/lib/device-pairing.ts
+msgid "This server does not support pairing a phone"
+msgstr ""
+
 #: src/pages/McpServersOverlay.tsx
 msgid "This server is already connected. Disconnect it first to authorize again."
 msgstr "Ce serveur est déjà connecté. Déconnectez-le d'abord pour l'autoriser à nouveau."
+
+#. placeholder {0}: pairing.server
+#: src/components/PairPhoneSettings.tsx
+msgid "This server's address ({0}) only works on this computer. Set WEB_ORIGIN to an address your phone can reach, such as a Tailscale or LAN address, and restart."
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/lib/run-error.ts
@@ -6522,6 +6606,7 @@ msgstr "Instructions de travail"
 #: src/components/ToolActivityDisclosure.tsx
 #: src/lib/roster-status.ts
 #: src/pages/Auth.tsx
+#: src/pages/PairPage.tsx
 #: src/pages/shell/transcript.tsx
 msgid "Working…"
 msgstr "En cours…"

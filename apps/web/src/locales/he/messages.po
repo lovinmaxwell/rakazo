@@ -767,6 +767,10 @@ msgstr "סוכן אחר"
 msgid "Another assistant"
 msgstr "עוזר אחר"
 
+#: src/pages/PairPage.tsx
+msgid "Another device you're signed in on made this code. It works once."
+msgstr ""
+
 #: src/components/AskCard.tsx
 msgid "Answer"
 msgstr "תשובה"
@@ -1720,6 +1724,7 @@ msgstr ""
 #: src/components/ComputersUnavailableHint.tsx
 #: src/components/InviteDialog.tsx
 #: src/components/markdown-copy.tsx
+#: src/components/PairPhoneSettings.tsx
 #: src/components/VaultSettings.tsx
 #: src/pages/model-settings/connection-controls.tsx
 #: src/pages/Onboarding.tsx
@@ -1746,6 +1751,10 @@ msgstr "העתקת קוד"
 #: src/components/markdown-copy.tsx
 msgid "Copy diagram source"
 msgstr "העתקת מקור הדיאגרמה"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "Copy link"
+msgstr ""
 
 #: src/pages/shell/agent-import.tsx
 msgid "Copy prompt"
@@ -1855,6 +1864,11 @@ msgstr "לא ניתן להתחבר למסך המחשב"
 #: src/pages/shell/use-computer.tsx
 msgid "Could not continue"
 msgstr "לא ניתן להמשיך"
+
+#: src/components/PairPhoneSettings.tsx
+#: src/lib/device-pairing.ts
+msgid "Could not create a pairing code"
+msgstr ""
 
 #: src/pages/shell/agent-import.tsx
 #: src/pages/shell/create-bot-dialog.tsx
@@ -2042,6 +2056,11 @@ msgstr "לא ניתן להתנתק. יש לנסות שוב."
 #: src/pages/Paywall.tsx
 msgid "Could not open billing"
 msgstr "לא ניתן לפתוח את החיוב"
+
+#: src/lib/device-pairing.ts
+#: src/pages/PairPage.tsx
+msgid "Could not pair this device"
+msgstr ""
 
 #: src/pages/VoiceSettingsOverlay.tsx
 msgid "Could not play a test clip"
@@ -2887,6 +2906,12 @@ msgstr "הרחבת טבלה"
 #: src/components/CloudAgentCard.tsx
 msgid "expired"
 msgstr "פג תוקף"
+
+#. placeholder {0}: Math.floor(secondsLeft / 60)
+#. placeholder {1}: String(secondsLeft % 60).padStart(2, "0")
+#: src/components/PairPhoneSettings.tsx
+msgid "Expires in {0}:{1}"
+msgstr ""
 
 #: src/components/AccountDataSettings.tsx
 #: src/pages/shell/bot-panel.tsx
@@ -3992,6 +4017,10 @@ msgstr ""
 msgid "New bot"
 msgstr "בוט חדש"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "New code"
+msgstr ""
+
 #: src/pages/GroupPanel.tsx
 msgid "New group"
 msgstr "קבוצה חדשה"
@@ -4313,6 +4342,10 @@ msgstr "לפתוח קישור חיצוני?"
 msgid "Open in full window"
 msgstr "פתיחה בחלון מלא"
 
+#: src/pages/PairPage.tsx
+msgid "Open in the Rakazo app"
+msgstr ""
+
 #: src/pages/shell/chat-header.tsx
 msgid "Open navigation"
 msgstr "פתיחת הניווט"
@@ -4387,6 +4420,11 @@ msgstr "הדף לא נמצא"
 #: src/pages/RoutineEditor.tsx
 msgid "PagerDuty incident"
 msgstr "תקרית PagerDuty"
+
+#: src/components/PairPhoneSettings.tsx
+#: src/pages/PairPage.tsx
+msgid "Pair a phone"
+msgstr ""
 
 #: src/components/PasskeySettings.tsx
 msgid "Passkey"
@@ -4472,6 +4510,10 @@ msgstr "פרסונה"
 
 #: src/components/SignupSurvey.tsx
 msgid "Personal"
+msgstr ""
+
+#: src/components/PairPhoneSettings.tsx
+msgid "Phone"
 msgstr ""
 
 #: src/components/call/VoiceChatCard.tsx
@@ -4607,6 +4649,10 @@ msgstr "ספקים"
 #: src/components/CloudAgentCard.tsx
 msgid "Pull request"
 msgstr "Pull request"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "QR code to pair a phone"
+msgstr ""
 
 #: src/pages/ActivityList.tsx
 msgid "Queued"
@@ -5195,6 +5241,10 @@ msgstr "שומר…"
 msgid "Say yes or no, or answer in a sentence."
 msgstr "אפשר לענות כן או לא, או במשפט."
 
+#: src/components/PairPhoneSettings.tsx
+msgid "Scan with your phone's camera and open the link in Rakazo to sign in without typing a password. Each code works once and expires after two minutes."
+msgstr ""
+
 #: src/components/ModelCredits.tsx
 msgid "Scheduled routines"
 msgstr ""
@@ -5426,6 +5476,10 @@ msgstr "הצגת עוד"
 msgid "Show password"
 msgstr "הצגת סיסמה"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "Show QR code"
+msgstr ""
+
 #: src/pages/GroupPanel.tsx
 msgid "Show selected"
 msgstr ""
@@ -5447,6 +5501,7 @@ msgstr "צפיפות סרגל הצד"
 #: src/pages/Auth.tsx
 #: src/pages/model-settings/connection-controls.tsx
 #: src/pages/Onboarding.tsx
+#: src/pages/PairPage.tsx
 #: src/pages/PluginsOverlay.tsx
 #: src/pages/Welcome.tsx
 msgid "Sign in"
@@ -5466,6 +5521,14 @@ msgstr "התחברות מחדש"
 #: src/pages/Onboarding.tsx
 msgid "Sign in at <0>{0}</0>, then paste the code here."
 msgstr "התחברו ב-<0>{0}</0> והדביקו כאן את הקוד."
+
+#: src/pages/PairPage.tsx
+msgid "Sign in here"
+msgstr ""
+
+#: src/pages/PairPage.tsx
+msgid "Sign in in this browser"
+msgstr ""
 
 #: src/pages/Auth.tsx
 msgid "Sign in to Rakazo"
@@ -5925,6 +5988,10 @@ msgstr "לא ניתן לבטל פעולה זו."
 msgid "This cannot be undone."
 msgstr "לא ניתן לבטל פעולה זו."
 
+#: src/components/PairPhoneSettings.tsx
+msgid "This code expired. Choose New code to make another."
+msgstr ""
+
 #: src/pages/HostComputerPrompt.tsx
 msgid "this computer"
 msgstr "המחשב הזה"
@@ -5974,6 +6041,14 @@ msgstr "חלון ההקשר של המודל הזה קטן מדי. יש לבחו�
 msgid "This month"
 msgstr "החודש"
 
+#: src/lib/user-error.ts
+msgid "This pairing code is invalid or has expired"
+msgstr ""
+
+#: src/pages/PairPage.tsx
+msgid "This pairing link is invalid or has expired."
+msgstr ""
+
 #: src/components/AccountAccess.tsx
 msgid "This permanently deletes your account and data."
 msgstr "פעולה זו מוחקת לצמיתות את החשבון ואת הנתונים."
@@ -6006,9 +6081,18 @@ msgstr "לא ניתן להקצות את השרת הזה בלי בוט."
 msgid "This server did not request browser authorization."
 msgstr "השרת הזה לא ביקש הרשאה דרך הדפדפן."
 
+#: src/lib/device-pairing.ts
+msgid "This server does not support pairing a phone"
+msgstr ""
+
 #: src/pages/McpServersOverlay.tsx
 msgid "This server is already connected. Disconnect it first to authorize again."
 msgstr "השרת הזה כבר מחובר. יש לנתק אותו קודם כדי לאשר מחדש."
+
+#. placeholder {0}: pairing.server
+#: src/components/PairPhoneSettings.tsx
+msgid "This server's address ({0}) only works on this computer. Set WEB_ORIGIN to an address your phone can reach, such as a Tailscale or LAN address, and restart."
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/lib/run-error.ts
@@ -6522,6 +6606,7 @@ msgstr "הוראות עבודה"
 #: src/components/ToolActivityDisclosure.tsx
 #: src/lib/roster-status.ts
 #: src/pages/Auth.tsx
+#: src/pages/PairPage.tsx
 #: src/pages/shell/transcript.tsx
 msgid "Working…"
 msgstr "עובד…"

@@ -767,6 +767,10 @@ msgstr "Другой агент"
 msgid "Another assistant"
 msgstr "Другой ассистент"
 
+#: src/pages/PairPage.tsx
+msgid "Another device you're signed in on made this code. It works once."
+msgstr ""
+
 #: src/components/AskCard.tsx
 msgid "Answer"
 msgstr "Ответ"
@@ -1720,6 +1724,7 @@ msgstr ""
 #: src/components/ComputersUnavailableHint.tsx
 #: src/components/InviteDialog.tsx
 #: src/components/markdown-copy.tsx
+#: src/components/PairPhoneSettings.tsx
 #: src/components/VaultSettings.tsx
 #: src/pages/model-settings/connection-controls.tsx
 #: src/pages/Onboarding.tsx
@@ -1746,6 +1751,10 @@ msgstr "Копировать код"
 #: src/components/markdown-copy.tsx
 msgid "Copy diagram source"
 msgstr "Копировать источник диаграммы"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "Copy link"
+msgstr ""
 
 #: src/pages/shell/agent-import.tsx
 msgid "Copy prompt"
@@ -1855,6 +1864,11 @@ msgstr "Не удалось подключиться к экрану компь�
 #: src/pages/shell/use-computer.tsx
 msgid "Could not continue"
 msgstr "Не удалось продолжить"
+
+#: src/components/PairPhoneSettings.tsx
+#: src/lib/device-pairing.ts
+msgid "Could not create a pairing code"
+msgstr ""
 
 #: src/pages/shell/agent-import.tsx
 #: src/pages/shell/create-bot-dialog.tsx
@@ -2041,6 +2055,11 @@ msgstr "Не удалось выйти. Попробуйте ещё раз."
 #: src/pages/Onboarding.tsx
 #: src/pages/Paywall.tsx
 msgid "Could not open billing"
+msgstr ""
+
+#: src/lib/device-pairing.ts
+#: src/pages/PairPage.tsx
+msgid "Could not pair this device"
 msgstr ""
 
 #: src/pages/VoiceSettingsOverlay.tsx
@@ -2887,6 +2906,12 @@ msgstr "Развернуть таблицу"
 #: src/components/CloudAgentCard.tsx
 msgid "expired"
 msgstr "истёк срок"
+
+#. placeholder {0}: Math.floor(secondsLeft / 60)
+#. placeholder {1}: String(secondsLeft % 60).padStart(2, "0")
+#: src/components/PairPhoneSettings.tsx
+msgid "Expires in {0}:{1}"
+msgstr ""
 
 #: src/components/AccountDataSettings.tsx
 #: src/pages/shell/bot-panel.tsx
@@ -3992,6 +4017,10 @@ msgstr "Новые"
 msgid "New bot"
 msgstr "Новый бот"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "New code"
+msgstr ""
+
 #: src/pages/GroupPanel.tsx
 msgid "New group"
 msgstr "Новая группа"
@@ -4313,6 +4342,10 @@ msgstr "Открыть внешнюю ссылку?"
 msgid "Open in full window"
 msgstr "Открыть в полном окне"
 
+#: src/pages/PairPage.tsx
+msgid "Open in the Rakazo app"
+msgstr ""
+
 #: src/pages/shell/chat-header.tsx
 msgid "Open navigation"
 msgstr "Открыть навигацию"
@@ -4387,6 +4420,11 @@ msgstr "Страница не найдена"
 #: src/pages/RoutineEditor.tsx
 msgid "PagerDuty incident"
 msgstr "Инцидент PagerDuty"
+
+#: src/components/PairPhoneSettings.tsx
+#: src/pages/PairPage.tsx
+msgid "Pair a phone"
+msgstr ""
 
 #: src/components/PasskeySettings.tsx
 msgid "Passkey"
@@ -4472,6 +4510,10 @@ msgstr "Личность"
 
 #: src/components/SignupSurvey.tsx
 msgid "Personal"
+msgstr ""
+
+#: src/components/PairPhoneSettings.tsx
+msgid "Phone"
 msgstr ""
 
 #: src/components/call/VoiceChatCard.tsx
@@ -4607,6 +4649,10 @@ msgstr "Поставщики"
 #: src/components/CloudAgentCard.tsx
 msgid "Pull request"
 msgstr "Запрос на слияние"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "QR code to pair a phone"
+msgstr ""
 
 #: src/pages/ActivityList.tsx
 msgid "Queued"
@@ -5195,6 +5241,10 @@ msgstr "Сохранение…"
 msgid "Say yes or no, or answer in a sentence."
 msgstr "Скажите «да» или «нет» или ответьте предложением."
 
+#: src/components/PairPhoneSettings.tsx
+msgid "Scan with your phone's camera and open the link in Rakazo to sign in without typing a password. Each code works once and expires after two minutes."
+msgstr ""
+
 #: src/components/ModelCredits.tsx
 msgid "Scheduled routines"
 msgstr ""
@@ -5426,6 +5476,10 @@ msgstr "Показать ещё"
 msgid "Show password"
 msgstr "Показать пароль"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "Show QR code"
+msgstr ""
+
 #: src/pages/GroupPanel.tsx
 msgid "Show selected"
 msgstr ""
@@ -5447,6 +5501,7 @@ msgstr ""
 #: src/pages/Auth.tsx
 #: src/pages/model-settings/connection-controls.tsx
 #: src/pages/Onboarding.tsx
+#: src/pages/PairPage.tsx
 #: src/pages/PluginsOverlay.tsx
 #: src/pages/Welcome.tsx
 msgid "Sign in"
@@ -5466,6 +5521,14 @@ msgstr "Войдите снова"
 #: src/pages/Onboarding.tsx
 msgid "Sign in at <0>{0}</0>, then paste the code here."
 msgstr "Войдите на <0>{0}</0>, затем вставьте код сюда."
+
+#: src/pages/PairPage.tsx
+msgid "Sign in here"
+msgstr ""
+
+#: src/pages/PairPage.tsx
+msgid "Sign in in this browser"
+msgstr ""
 
 #: src/pages/Auth.tsx
 msgid "Sign in to Rakazo"
@@ -5925,6 +5988,10 @@ msgstr "Это действие нельзя отменить."
 msgid "This cannot be undone."
 msgstr "Это невозможно отменить."
 
+#: src/components/PairPhoneSettings.tsx
+msgid "This code expired. Choose New code to make another."
+msgstr ""
+
 #: src/pages/HostComputerPrompt.tsx
 msgid "this computer"
 msgstr "этот компьютер"
@@ -5974,6 +6041,14 @@ msgstr "Контекстное окно этой модели слишком м�
 msgid "This month"
 msgstr ""
 
+#: src/lib/user-error.ts
+msgid "This pairing code is invalid or has expired"
+msgstr ""
+
+#: src/pages/PairPage.tsx
+msgid "This pairing link is invalid or has expired."
+msgstr ""
+
 #: src/components/AccountAccess.tsx
 msgid "This permanently deletes your account and data."
 msgstr "Это навсегда удалит ваш аккаунт и данные."
@@ -6006,9 +6081,18 @@ msgstr "Этот сервер невозможно назначить без б�
 msgid "This server did not request browser authorization."
 msgstr "Этот сервер не запрашивал авторизацию браузера."
 
+#: src/lib/device-pairing.ts
+msgid "This server does not support pairing a phone"
+msgstr ""
+
 #: src/pages/McpServersOverlay.tsx
 msgid "This server is already connected. Disconnect it first to authorize again."
 msgstr "Этот сервер уже подключен. Сначала отключите его, чтобы авторизоваться снова."
+
+#. placeholder {0}: pairing.server
+#: src/components/PairPhoneSettings.tsx
+msgid "This server's address ({0}) only works on this computer. Set WEB_ORIGIN to an address your phone can reach, such as a Tailscale or LAN address, and restart."
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/lib/run-error.ts
@@ -6522,6 +6606,7 @@ msgstr "Рабочие инструкции"
 #: src/components/ToolActivityDisclosure.tsx
 #: src/lib/roster-status.ts
 #: src/pages/Auth.tsx
+#: src/pages/PairPage.tsx
 #: src/pages/shell/transcript.tsx
 msgid "Working…"
 msgstr "Выполняется…"

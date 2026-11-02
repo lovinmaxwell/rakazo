@@ -767,6 +767,10 @@ msgstr "別のエージェント"
 msgid "Another assistant"
 msgstr "他のアシスタント"
 
+#: src/pages/PairPage.tsx
+msgid "Another device you're signed in on made this code. It works once."
+msgstr ""
+
 #: src/components/AskCard.tsx
 msgid "Answer"
 msgstr "回答"
@@ -1720,6 +1724,7 @@ msgstr ""
 #: src/components/ComputersUnavailableHint.tsx
 #: src/components/InviteDialog.tsx
 #: src/components/markdown-copy.tsx
+#: src/components/PairPhoneSettings.tsx
 #: src/components/VaultSettings.tsx
 #: src/pages/model-settings/connection-controls.tsx
 #: src/pages/Onboarding.tsx
@@ -1746,6 +1751,10 @@ msgstr "コードをコピー"
 #: src/components/markdown-copy.tsx
 msgid "Copy diagram source"
 msgstr "ダイアグラムのソースをコピー"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "Copy link"
+msgstr ""
 
 #: src/pages/shell/agent-import.tsx
 msgid "Copy prompt"
@@ -1855,6 +1864,11 @@ msgstr "コンピューターの画面に接続できませんでした"
 #: src/pages/shell/use-computer.tsx
 msgid "Could not continue"
 msgstr "続行できませんでした"
+
+#: src/components/PairPhoneSettings.tsx
+#: src/lib/device-pairing.ts
+msgid "Could not create a pairing code"
+msgstr ""
 
 #: src/pages/shell/agent-import.tsx
 #: src/pages/shell/create-bot-dialog.tsx
@@ -2042,6 +2056,11 @@ msgstr "ログアウトできませんでした。もう一度お試しくださ
 #: src/pages/Paywall.tsx
 msgid "Could not open billing"
 msgstr "請求ページを開けませんでした"
+
+#: src/lib/device-pairing.ts
+#: src/pages/PairPage.tsx
+msgid "Could not pair this device"
+msgstr ""
 
 #: src/pages/VoiceSettingsOverlay.tsx
 msgid "Could not play a test clip"
@@ -2887,6 +2906,12 @@ msgstr "テーブルを拡大"
 #: src/components/CloudAgentCard.tsx
 msgid "expired"
 msgstr "期限切れ"
+
+#. placeholder {0}: Math.floor(secondsLeft / 60)
+#. placeholder {1}: String(secondsLeft % 60).padStart(2, "0")
+#: src/components/PairPhoneSettings.tsx
+msgid "Expires in {0}:{1}"
+msgstr ""
 
 #: src/components/AccountDataSettings.tsx
 #: src/pages/shell/bot-panel.tsx
@@ -3992,6 +4017,10 @@ msgstr "新規"
 msgid "New bot"
 msgstr "新しいボット"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "New code"
+msgstr ""
+
 #: src/pages/GroupPanel.tsx
 msgid "New group"
 msgstr "新しいグループ"
@@ -4313,6 +4342,10 @@ msgstr "外部リンクを開きますか？"
 msgid "Open in full window"
 msgstr "フルウィンドウで開く"
 
+#: src/pages/PairPage.tsx
+msgid "Open in the Rakazo app"
+msgstr ""
+
 #: src/pages/shell/chat-header.tsx
 msgid "Open navigation"
 msgstr "ナビゲーションを開く"
@@ -4387,6 +4420,11 @@ msgstr "ページが見つかりません"
 #: src/pages/RoutineEditor.tsx
 msgid "PagerDuty incident"
 msgstr "PagerDutyインシデント"
+
+#: src/components/PairPhoneSettings.tsx
+#: src/pages/PairPage.tsx
+msgid "Pair a phone"
+msgstr ""
 
 #: src/components/PasskeySettings.tsx
 msgid "Passkey"
@@ -4473,6 +4511,10 @@ msgstr "ペルソナ"
 #: src/components/SignupSurvey.tsx
 msgid "Personal"
 msgstr "個人"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "Phone"
+msgstr ""
 
 #: src/components/call/VoiceChatCard.tsx
 msgid "Phone call"
@@ -4607,6 +4649,10 @@ msgstr "プロバイダー"
 #: src/components/CloudAgentCard.tsx
 msgid "Pull request"
 msgstr "プルリクエスト"
+
+#: src/components/PairPhoneSettings.tsx
+msgid "QR code to pair a phone"
+msgstr ""
 
 #: src/pages/ActivityList.tsx
 msgid "Queued"
@@ -5195,6 +5241,10 @@ msgstr "保存中…"
 msgid "Say yes or no, or answer in a sentence."
 msgstr "「はい」か「いいえ」、または文章で答えてください。"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "Scan with your phone's camera and open the link in Rakazo to sign in without typing a password. Each code works once and expires after two minutes."
+msgstr ""
+
 #: src/components/ModelCredits.tsx
 msgid "Scheduled routines"
 msgstr "スケジュール済みのルーティン"
@@ -5426,6 +5476,10 @@ msgstr "さらに表示"
 msgid "Show password"
 msgstr "パスワードを表示"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "Show QR code"
+msgstr ""
+
 #: src/pages/GroupPanel.tsx
 msgid "Show selected"
 msgstr "選択中を表示"
@@ -5447,6 +5501,7 @@ msgstr "サイドバーの密度"
 #: src/pages/Auth.tsx
 #: src/pages/model-settings/connection-controls.tsx
 #: src/pages/Onboarding.tsx
+#: src/pages/PairPage.tsx
 #: src/pages/PluginsOverlay.tsx
 #: src/pages/Welcome.tsx
 msgid "Sign in"
@@ -5466,6 +5521,14 @@ msgstr "再度ログイン"
 #: src/pages/Onboarding.tsx
 msgid "Sign in at <0>{0}</0>, then paste the code here."
 msgstr "<0>{0}</0> でサインインし、表示されたコードをここに貼り付けてください。"
+
+#: src/pages/PairPage.tsx
+msgid "Sign in here"
+msgstr ""
+
+#: src/pages/PairPage.tsx
+msgid "Sign in in this browser"
+msgstr ""
 
 #: src/pages/Auth.tsx
 msgid "Sign in to Rakazo"
@@ -5925,6 +5988,10 @@ msgstr "この操作は元に戻せません。"
 msgid "This cannot be undone."
 msgstr "この操作は元に戻せません。"
 
+#: src/components/PairPhoneSettings.tsx
+msgid "This code expired. Choose New code to make another."
+msgstr ""
+
 #: src/pages/HostComputerPrompt.tsx
 msgid "this computer"
 msgstr "このコンピューター"
@@ -5974,6 +6041,14 @@ msgstr "このモデルのコンテキストウィンドウは小さすぎます
 msgid "This month"
 msgstr "今月"
 
+#: src/lib/user-error.ts
+msgid "This pairing code is invalid or has expired"
+msgstr ""
+
+#: src/pages/PairPage.tsx
+msgid "This pairing link is invalid or has expired."
+msgstr ""
+
 #: src/components/AccountAccess.tsx
 msgid "This permanently deletes your account and data."
 msgstr "アカウントとデータが完全に削除されます。"
@@ -6006,9 +6081,18 @@ msgstr "このサーバーはボットなしでは割り当てられません。
 msgid "This server did not request browser authorization."
 msgstr "このサーバーはブラウザでの認可を要求しませんでした。"
 
+#: src/lib/device-pairing.ts
+msgid "This server does not support pairing a phone"
+msgstr ""
+
 #: src/pages/McpServersOverlay.tsx
 msgid "This server is already connected. Disconnect it first to authorize again."
 msgstr "このサーバーはすでに接続されています。再度認可するには、先に切断してください。"
+
+#. placeholder {0}: pairing.server
+#: src/components/PairPhoneSettings.tsx
+msgid "This server's address ({0}) only works on this computer. Set WEB_ORIGIN to an address your phone can reach, such as a Tailscale or LAN address, and restart."
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/lib/run-error.ts
@@ -6522,6 +6606,7 @@ msgstr "作業の指示"
 #: src/components/ToolActivityDisclosure.tsx
 #: src/lib/roster-status.ts
 #: src/pages/Auth.tsx
+#: src/pages/PairPage.tsx
 #: src/pages/shell/transcript.tsx
 msgid "Working…"
 msgstr "処理中…"
